@@ -80,5 +80,29 @@ window.addEventListener('resize', () => {
 
 
 
+const personInput = document.getElementById("person");
+  const emailInput = document.getElementById("email");
+
+  personInput.addEventListener("input", removeError);
+  emailInput.addEventListener("input", removeError);
+
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    if (personInput.value.trim() === "" || emailInput.value.trim() === "") {
+      if (personInput.value.trim() === "") {
+        personInput.classList.add("error");
+      }
+
+      if (emailInput.value.trim() === "") {
+        emailInput.classList.add("error");
+      }
+
+      event.preventDefault();
+    }
+  });
+
+  function removeError() {
+    this.classList.remove("error");
+  }
 document.getElementById("myForm").reset();
+
 

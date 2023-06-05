@@ -260,7 +260,10 @@ a{
   .image-border-mob{
     display: none;
   }
+  
 .contact{
+    position: relative;
+    z-index: 3;
     padding-top: 200px;
     padding-bottom: 400px;
 }
@@ -328,7 +331,11 @@ a{
     background-color: transparent;
     transition: border-color 0.3s;
   }
+  .error {
+    border: 1px solid red;
+  }
   .submit-btn{
+    cursor: pointer;
     margin-top: 60px;
     width: 440px;
     height: 70px;
